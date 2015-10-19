@@ -1,0 +1,30 @@
+  <%= javascript_include_tag "fizzbuzz" %>
+
+<h1>Fizzbuzz</h1>
+
+<p class="explanation">
+	This is an implementation of the classic <em>FizzBuzz</em> exercise.  The rules are:
+	<ul>
+		<li>Print out every number from 1 to 100</li>
+		<li>If the number if evenly divisible by 3, print "Fizz"</li>
+		<li>If the number if evenly divisible by 7, print "Buzz"</li>
+		<li>If the number if evenly divisible by both 3 <em>and</em> , print "Fizz Buzz"</li>
+	</ul>
+</p>
+
+<div class="output">
+<% @lines.each do |line| %>
+<%=line%><br>
+<% end %>
+</div>
+
+<p class="explanation">
+	This is a fizzbuzz implementation that uses ajax to load each line, one at a time.
+</p>
+<p class="explanation">
+	Start: <input type="text" id="ajax-based-start-num" value="1" /><br>
+	End: <input type="text" id="ajax-based-end-num" value="100" /><br>
+	<button id="ajax-based-go-btn">Go!</button>
+</p>
+<div class="output" id="ajax-based-output">
+</div>
